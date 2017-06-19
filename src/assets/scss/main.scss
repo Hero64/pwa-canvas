@@ -1,0 +1,10 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import 'variables';
+
+@import 'app';
+// components
+@import './components/empty';
+@import './components/add-list';
+@import './components/list';
+@import './components/add-task';
+@import './components/task';

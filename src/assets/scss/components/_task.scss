@@ -1,0 +1,16 @@
+.task-container {
+  padding: 10px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, .1);
+  margin-bottom: 10px;
+  .task-date {
+    text-align: right;
+    font-size: 12px;
+    font-style: italic;
+  }
+  .task-description {
+    font-weight: 200;
+    font-size: 13px;
+    color: rgba(255, 255, 255, .8);
+  }
+}

@@ -1,0 +1,48 @@
+.add-task-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 30px);
+  border-radius: 0 0 3px 3px;
+  width: 100%;
+  button {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 40px;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
+  input {
+    background: rgba(255, 255, 255, .5);
+    height: 60px;
+    padding: 15px  40px 15px 15px;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    width: 100%;
+    display: block;
+    color: #333;
+    font-weight: 700;
+    font-size: 13px;
+    + label {
+      color: rgba(0, 0, 0, .5);
+      position: absolute;
+      top: 24px;
+      left: 15px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .3s;
+    }
+    &:focus, &:valid{
+      + label {
+        top: 7px;
+        left: 8px;
+        transform: scale(.8);
+      }
+    }
+  }
+}

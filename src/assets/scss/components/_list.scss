@@ -1,0 +1,85 @@
+.lists {
+  height: 100%;
+  margin: 0 -15px;
+  display: flex;
+}
+.list-container {
+  color: #fff;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .6);
+  border-radius: 2px;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 15px;
+  .list-title {
+    border-bottom: 3px solid $red-1;
+    cursor: pointer;
+    margin: 0;
+    padding: 15px;
+    border-radius: 2px 2px 0 0;
+    background-color: #666;
+    position: relative;
+    .remove-list {
+      height: 20px;
+      width: 20px;
+      background: 0;
+      border: 0;
+      outline: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      cursor: pointer;
+      overflow: hidden;
+      &::before, &::after {
+        content: '';
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 0;
+        transition: .3s;
+      }
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+    &:hover {
+      .remove-list {
+        &::before {
+        transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .list-task {
+    position: relative;
+    padding: 15px;
+    overflow: auto;
+    max-height: calc(100% - 142px);
+    span {
+      width: 100%;
+      min-height: 100px;
+      display: block;
+    }
+  }
+  .task-empty {
+    padding-top: 30px;
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+    i {
+      font-size: 4rem;
+      text-shadow: 2px 0 rgba(0, 0, 0, .3);
+    }
+    p {
+      font-size: 13px;
+    }
+  }
+}
